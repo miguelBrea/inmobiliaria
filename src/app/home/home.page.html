@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Inmuebles
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,24 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Inmuebles</ion-title>
     </ion-toolbar>
-  </ion-header>
+</ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<ion-content>
+  <div class="ion-padding">
+    <ion-list>
+      <ion-item *ngFor="let i of inmoService.properties">
+        <ion-avatar slot="start">
+          <img src="../../assets/images/{{i.image}}">
+        </ion-avatar>
+        <div>
+          <p>{{i.property}}</p>
+          <p>{{i.price}}€</p>
+          <p>{{i.bedrooms}} baños</p>
+          <p>{{i.sqm}} m2</p>
+        </div>
+      </ion-item>
+    </ion-list>
   </div>
 </ion-content>
