@@ -1,0 +1,7 @@
+{
+  "name": "inmobiliaria",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
